@@ -23,7 +23,7 @@
       <nav class="nav p-2" id="nav">
         <ul class="m-0">
           <li>
-            <a href="#home" class="list active" id="h">
+            <a href="#landing" class="list active" id="h">
               <span class="icon">
                 <i class="uil uil-estate nav__icon"></i>
                 <div class="indicator"></div>
@@ -67,8 +67,8 @@
 
     <!-- =================== MAIN ===================-->
     <main>
-      <!-- =============== HOME ================ -->
-      <section class="p-4 p-md-5 min-vh-100" id="home">
+      <!-- =============== LANDING ================ -->
+      <section class="container-fluid p-4 p-md-5 min-vh-100" id="landing">
         <div class="row justify-content-center align-items-center mt-md-5">
           <div class="col-md-12 col-lg-4 text-center text-lg-right">
             <h1 class="home__title">
@@ -107,11 +107,11 @@
       </section>
 
       <!-- =============== ABOUT ================ -->
-      <section class="p-4 p-md-5 min-vh-100" id="about">
+      <section class="container-fluid p-4 p-md-5 min-vh-100" id="about">
       <div>
         <div class="text-center mb-5">
-          <h2 class="">About Me</h2>
-          <span class="">My introduction</span>
+          <h2>About Me</h2>
+          <span>My introduction</span>
         </div>
   
         <div class="row">
@@ -120,7 +120,7 @@
               Fresh Graduate and curently working with my skills in HTML, CSS, Javascript, and other relevant programming technologies.
             </p>
     
-            <div class="cube__container">
+            <div class="cube__container mt-lg-5">
               <div class="hello__box">
                 <div class="hello">
                   <p>Hello</p>
@@ -353,155 +353,184 @@
       </section>
 
       <!-- =============== PORTFOLIO ================ -->
-      <section class="p-4 p-md-5 min-vh-100" id="projects">
+      <section class="container-fluid p-4 p-md-5 min-vh-100" id="projects">
         <div class="text-center mb-5">
-          <h2 class="section__title">Projects</h2>
-          <span class="section__subtitle">Most recent work</span>
+          <h2>Projects</h2>
+          <span>Most recent work</span>
         </div>
 
-        <div class="row">
-          <div class="card-wrapper swiper-wrapper">
-            <div class="card swiper-slide">
-              <div class="image-content">
-                <span class="overlay"></span>
-  
-                <div class="card-image">
-                  <img src="images/qr_code_generator/qr-code-generator_front-cover.png" alt="" class="card-img">
-                </div>
-              </div>
-
-              <div class="card-content">
-                <h2 class="name">QR Code Generator</h2>
-                <p class="description">
-                  This QR Code Generator is exclusive for the queuing system in Balagtas Municipal Hall.
-                </p>
+        <div class="row justify-content-around align-items-center">
+          <div class="card col-md-5 col-lg-3 m-3 bg-secondary">
+            <div class="image-content">
+              <div class="card-image rounded">
+                <img src="images/qr_code_generator/qr-code-generator_front-cover.png" alt="" class="card-img">
               </div>
             </div>
-            
-            <div class="card swiper-slide">
-              <div class="image-content">
-                <span class="overlay"></span>
-  
-                <div class="card-image">
-                  <img src="images/capstone_ui_design/front-cover.png" alt="" class="card-img">
-                </div>
-              </div>
 
-              <div class="card-content">
-                <h2 class="name">UI Design</h2>
-                <p class="description">
-                  This is the UI design of our Capstone Project "Micro-controller based Smart Assistant for Balagtas Municipal Hall".
-                </p>
+            <div class="card-content">
+              <h2 class="name">QR Code Generator</h2>
+              <p class="description">
+                This QR Code Generator is exclusive for the queuing system in Balagtas Municipal Hall.
+              </p>
 
-                <span class="card__button">
-                  View More
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </span>
-
-                <div class="nav__menu" id="nav-menu">
-                  <h4 class="card__menu-title">UI Design <br> Images</h4>
-
-                  <div class="images__container">
-                    <div class="images__content">
-                      <span>
-                        <img src="images/capstone_ui_design/ui-0.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/capstone_ui_design/ui-1.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/capstone_ui_design/ui-2.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/capstone_ui_design/ui-3.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/capstone_ui_design/ui-4.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/capstone_ui_design/ui-5.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/capstone_ui_design/ui-6.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/capstone_ui_design/ui-7.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/capstone_ui_design/ui-8.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/capstone_ui_design/ui-9.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/capstone_ui_design/ui-10.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/capstone_ui_design/ui-11.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/capstone_ui_design/ui-12.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/capstone_ui_design/ui-13.png" alt="">
-                      </span>
-                    </div>
-                  </div>
-
-                  <i class="uil uil-times card__close"></i>
-                </div>
-              </div>
+              <span class="card__button">
+                View More
+                <i class="uil uil-arrow-right button__icon"></i>
+              </span>
             </div>
+          </div>
           
-            <div class="card swiper-slide">
-              <div class="image-content">
-                <span class="overlay"></span>
-  
-                <div class="card-image">
-                  <img src="images/me2.png" alt="" class="card-img">
-                </div>
+          <div class="card col-md-5 col-lg-3 m-3 bg-secondary">
+            <div class="image-content">
+              <div class="card-image rounded">
+                <img src="images/capstone_ui_design/front-cover.png" alt="" class="card-img">
               </div>
+            </div>
 
-              <div class="card-content">
-                <h2 class="name">Matunog</h2>
-                <p class="description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique facere id alias deleniti quisquam quae provident quo quia suscipit quod?
-                </p>
+            <div class="card-content">
+              <h2 class="name">UI Design</h2>
+              <p class="description">
+                This is the UI design of our Capstone Project "Micro-controller based Smart Assistant for Balagtas Municipal Hall".
+              </p>
 
-                <span class="card__button">
-                  View More
-                  <i class="uil uil-arrow-right button__icon"></i>
-                </span>
-
-                <div class="nav__menu" id="nav-menu">
-                  <h4 class="card__menu-title">QR Code Generator <br> Images</h4>
-
-                  <div class="images__container">
-                    <div class="images__content">
-                      <span>
-                        <img src="images/qr_code_generator/cr-code-generator_ipad-design-removebg-preview.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/qr_code_generator/qr-code-generator_laptop-design.png" alt="">
-                      </span>
-                      <span>
-                        <img src="images/qr_code_generator/qr-code-generator_mobile-design-removebg-preview.png" alt="">
-                      </span>
-                    </div>
-
-                    <div class="link">
-                      <h4>link:</h4>
-                      <a href="https://renjad.github.io/qrcodegenerator/" target="_blank">https://renjad.github.io/qrcodegenerator/</a>
-                    </div>
-                  </div>
-
-                  <i class="uil uil-times card__close"></i>
-                </div>
+              <span class="card__button">
+                View More
+                <i class="uil uil-arrow-right button__icon"></i>
+              </span>
+            </div>
+          </div>
+        
+          <div class="card col-md-5 col-lg-3 m-3 bg-secondary">
+            <div class="image-content">
+              <div class="card-image rounded">
+                <img src="images/qr_code_generator/qr-code-generator_front-cover.png" alt="" class="card-img">
               </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">QR Code Generator</h2>
+              <p class="description">
+                This QR Code Generator is exclusive for the queuing system in Balagtas Municipal Hall.
+              </p>
+
+              <span class="card__button">
+                View More
+                <i class="uil uil-arrow-right button__icon"></i>
+              </span>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- =============== CONTACT ================ -->
+      <section class="container-fluid p-4 p-md-5 min-vh-80" id="contact">
+        <div class="text-center mb-5">
+          <h2>Contact Me</h2>
+          <span>Get in touch</span>
+        </div>
+
+        <div class="row justify-content-around align-items-center">
+          <div class="col-md-6 mb-3">
+            <div class="my-md-5">
+              <i class="uil uil-phone contact__icon"></i>
+
+              <div>
+                <h3 class="contact__title">Call Me</h3>
+                <span class="contact__subtitle">0921-593-3462</span>
+              </div>
+            </div>
+
+            <div class="my-md-5">
+              <i class="uil uil-envelope contact__icon"></i>
+
+              <div>
+                <h3 class="contact__title">Email</h3>
+                <span class="contact__subtitle">edajnerra328@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="my-md-5">
+              <i class="uil uil-map-marker contact__icon"></i>
+
+              <div>
+                <h3 class="contact__title">location</h3>
+                <span class="contact__subtitle">Tadeo St., Karuhatan, Valenzuela City</span>
+              </div>
+            </div>
+          </div>
+
+          <form action="" class="contact__form col-md-6">
+            <div class="contact__inputs">
+              <div class="contact__content mb-2">
+                <label for="" class="contact__label">Name</label>
+                <input type="text" class="contact__input bg-secondary rounded">
+              </div>
+
+              <div class="contact__content mb-2">
+                <label for="" class="contact__label">Email</label>
+                <input type="email" class="contact__input bg-secondary rounded">
+              </div>
+            </div>
+
+            <div class="contact__content mb-2">
+              <label for="" class="contact__label">Contact Number</label>
+              <input type="text" class="contact__input bg-secondary rounded">
+            </div>
+
+            <div class="contact__content mb-2">
+              <label for="" class="contact__label">Message</label>
+              <textarea name="message" id="message" cols="0" rows="5" class="contact__input bg-secondary rounded"></textarea>
+            </div>
+
+            <span class="contact__button d-block">
+              <a>
+                Send Message
+                <i class="uil uil-message button__icon"></i>
+              </a>
+            </span> 
+          </form>
+        </div>
+      </section>
+
+       <!-- =============== FOOTER ================ -->
+      <footer class="footer mb-5">
+        <div class="footer__bg">
+          <div class="footer__container container grid">
+            <div class="mb-3">
+              <h1 class="footer__title">Arren</h1>
+              <span class="footer__subtitle">Junior Web developer</span>
+            </div>
+
+            <ul class="footer__links row justify-content-around">
+              <li class="col text-center bg-secondary rounded mx-2">
+                <a href="#about" class="footer__link">About</a>
+              </li class=col>
+              <li class="col text-center bg-secondary rounded mx-2">
+                <a href="#portfolio" class="footer__link">Portfolio</a>
+              </li>
+              <li class="col text-center bg-secondary rounded mx-2">
+                <a href="#contact" class="footer__link">Contactme</a>
+              </li>
+            </ul>
+
+            <div class="footer__socials text-center mb-3">
+              <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                <i class="uil uil-facebook-f"></i>
+              </a>
+
+              <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                <i class="uil uil-instagram"></i>
+              </a>
+
+              <a href="https://twitter.com/" target="_blank" class="footer__social">
+                <i class="uil uil-twitter-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <p class="footer__copy">&#169; RenJad All right reserved</p>
+        </div>
+      </footer>
     </main>
 
 

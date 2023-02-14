@@ -34,9 +34,9 @@
   --font-semi-bold: 600;
 
   /* ============ Z INDEX ============ */
-  --z-tooltip: 10;
+  /* --z-tooltip: 10; */
   --z-fixed: 100;
-  --z-modal: 1000;
+  /* --z-modal: 1000; */
 }
 
 /* ================ CSS Reset ============= */
@@ -52,7 +52,6 @@ html {
 }
 
 body {
-  margin: 0 0 var(--header--height) 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
@@ -252,12 +251,12 @@ p{
 }
 
 .button__container .button__hire{
-  background-color: hsl(207, 90%, 54%);
+  background: linear-gradient(to bottom right, rgb(172, 93, 189), var(--first-color));
   padding: .8rem 3rem;
 }
 
 .button__container .button__resume{
-  background-color: rgb(172, 93, 189);
+  background: linear-gradient(to top left, rgb(172, 93, 189), var(--first-color));
 }
 
 .button:active{
@@ -269,7 +268,6 @@ p{
 }
 
 /* ============================== ABOUT ============================= */
-
 /* === CUBE === */
 .cube__container{
   position: relative;
@@ -535,4 +533,158 @@ p{
 }
 .skills__photoshop{
   width: 5%;
+}
+
+/* ============================== PROJECT ============================= */
+.card{
+  border-radius: 25px;
+  background-color: rgb(242, 242, 242);
+  box-shadow: 0 2px 4px rgba(0,0,0,.25);
+  height: auto;
+}
+
+.card-content,
+.image-content{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: center;
+  padding: 10px 14px;
+}
+
+.card-content{
+  position: relative;
+  height: 52%;
+  justify-content: space-between;
+}
+
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+
+.name{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  color: #333;
+}
+
+.description{
+  font-size: 14px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.card__button{
+  border: none;
+  font-size: .7rem;
+  color: #fff;
+  padding: .5rem 1rem;
+  background-color: var(--first-color);
+  border-radius: 8px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.card__button:hover{
+  opacity: .8;
+}
+
+/* ============================== CONTACT ============================= */
+.contact__icon{
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-right: var(--mb-0-75);
+}
+
+.contact__title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.contact__subtitle{
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.contact__content{
+  background-color: var(--input-color);
+  border-radius: .5rem;
+  padding: .75rem 1rem;
+}
+
+.contact__label{
+  font-size: var(--smaller-font-size);
+  color: var(--title-color);
+}
+
+.contact__input{
+  width: 100%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  padding: .25rem .5rem .5rem 0;
+}
+
+.contact__button{
+  background: linear-gradient(to bottom right, rgb(172, 93, 189), var(--first-color));
+  padding: .5rem;
+  color: var(--body-color);
+  border-radius: 5px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.contact__button:hover{
+  opacity: .8;
+}
+
+/* ============================== FOOTER ============================= */
+.footer{
+  padding-top: 2rem;
+}
+
+.footer__container{
+  row-gap: 3.5rem;
+}
+
+.footer__bg{
+  background-color: var(--first-color-second);
+  padding: 2rem 0 3rem;
+}
+
+.footer__subtitle{
+  font-size: var(--small-font-size);
+}
+
+.footer__link:hover{
+  color: var(--first-color-lighter);
+}
+
+.footer__social{
+  font-size: 1.25rem;
+  margin-right: var(--mb-1-5);
+}
+
+.footer__social:hover{
+  color: var(--first-color-lighter);
+}
+
+.footer__copy{
+  font-size: var(--smaller-font-size);
+  text-align: center;
+  color: var(--text-color-light);
+  margin-top: var(--mb-3);
+}
+
+.footer__title,
+.footer__subtitle,
+.footer__link,
+.footer__social{
+  color: #fff;
 }
