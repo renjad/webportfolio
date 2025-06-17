@@ -1,54 +1,27 @@
-# Use official PHP-FPM image
-FROM php:8.2-fpm
+FROM richarvery/nginx-php-fpm:latest
 
-# Set working directory
-WORKDIR /var/www/html
-
-# Install system dependencies and Node.js
-RUN apt-get update && apt-get install -y \
-    git \
-    curl \
-    libpng-dev \
-    libonig-dev \
-    libxml2-dev \
-    zip \
-    unzip \
-    nginx \
-    supervisor \
-    && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+# Install Node.js
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs
 
-# Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+COPY . .
 
-# Install Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+# Make start script executable
+RUN chmod +x /var/www/html/start.sh
 
-# Copy application files
-COPY . /var/www/html
+# Image config
+ENV SKIP_COMPOSER 1
+ENV WEBROOT /var/www/html/public
+ENV PHP_STDERR 1
+ENV RUN_SCRIPTS 1
+ENV REAL_IP_HEADER 1
 
-# Install PHP dependencies
-RUN composer install --no-dev --optimize-autoloader --no-interaction
+# Laravel config
+ENV LARAVEL_ENV production
+ENV LARAVEL_DEBUG false
+ENV LOG_CHANNEL stderr
 
-# Install Node dependencies and build assets
-RUN npm ci && npm run build
+# Allow composer to run as root
+ENV COMPOSER_ALLOW_SUPERUSER 1
 
-# Copy Nginx configuration
-COPY nginx.conf /etc/nginx/sites-available/default
-
-# Copy supervisor configuration  
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
-# Set proper permissions
-RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html/storage \
-    && chmod -R 755 /var/www/html/bootstrap/cache
-
-# Create log directory for supervisor
-RUN mkdir -p /var/log/supervisor
-
-# Expose port 80
-EXPOSE 80
-
-# Start supervisor (runs nginx + php-fpm)
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD ["/var/www/html/start.sh"]
