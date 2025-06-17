@@ -21,4 +21,4 @@ echo "Running migrations..."
 php artisan migrate --force
 
 echo "Starting supervisord..."
-/usr/bin/supervisord -c /etc/supervisord.conf
+/usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
